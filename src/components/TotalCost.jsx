@@ -8,14 +8,14 @@ const TotalCost = ({ numberofPoeple }) => {
 	const getItemsFromTotalCost = () => {
 		const items = [];
 
-		venueItems.map((item) => {
+		venueItems.forEach((item) => {
 			if (item.quantity > 0) items.push({ ...item, type: "venue" });
 		});
-		addonsItems.map((item) => {
+		addonsItems.forEach((item) => {
 			if (item.quantity > 0) items.push({ ...item, type: "addons" });
 		});
 
-		mealItems.map((item) => {
+		mealItems.forEach((item) => {
 			if (item.selected) items.push({ ...item, type: "meals" });
 		});
 
